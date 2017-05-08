@@ -895,6 +895,9 @@
             if (!type || type == 'default') {
                 return require('./adapters/default')(kc);
             }
+            else if (type === 'iframe') {
+                return require('./adapters/iframe')(kc);
+            }
             else if (type === 'popup') {
                 return require('./adapters/popup')(kc);
             }
